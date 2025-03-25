@@ -2,7 +2,7 @@
 // let btnContainer=document.getElementsByClassName("btn-container")[0];
 // async function getData(){
 //     try {
-//    let response= await fetch("http://localhost:8000/product")
+//    let response= await fetch("https://cream-bejewled-tie.glitch.me/products")
 //         if (!response.ok){
 //          throw new Error("HTTPS invaild",response.status)
 //         }
@@ -80,7 +80,7 @@ let btnContainer = document.getElementsByClassName("btn-container")[0];
 // let id = document.getElementById("id");
 async function getproducts() {
     try {
-        let response = await fetch("http://localhost:8000/products");
+        let response = await fetch("");
         if (!response.ok) {
             throw new Error("HTTP Errror : ", response.status);
         }
@@ -185,7 +185,7 @@ function displayButtons() {
 
 async function DeleteData(id) {
     try {
-        let response = await fetch(`http://localhost:8000/products/${id}`, { method: "DELETE" });
+        let response = await fetch(`https://cream-bejewled-tie.glitch.me/products/${id}`, { method: "DELETE" });
         
         if (response.ok) {
             let products = JSON.parse(localStorage.getItem("products"));
